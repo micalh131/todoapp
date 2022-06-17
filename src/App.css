@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+* {
+  font-family: "Poppins", arial;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: #c0c0aa; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #1cefff,
+    #c0c0aa
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #1cefff,
+    #c0c0aa
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-app {
   display: flex;
   flex-direction: column;
+  justify-content: start;
+  width: 20em;
+  min-height: 20em;
+  background: white;
+  text-align: center;
+  margin: 7em auto;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+h1 {
+  margin: 32px 0;
+  font-size: 24px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.todo-form {
+  margin-top: 32px;
+}
+
+.todo-button {
+  padding: 17px;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  outline: none;
+  background: #1cefff;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+.todo-input {
+  padding: 15px 32px 15px 16px;
+  border-radius: 20px 0 0 20px;
+  border: 2px solid #1cefff;
+  outline: none;
+  width: 7em;
+  background: #f7f7f7;
+  font-size: 18px;
+}
+
+.todo-input.edit {
+  border: 2px solid #149fff;
+}
+
+.todo-button.edit {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgba(17, 122, 255, 1) 100%
+  );
+  padding: 16px 22px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin: 4px auto;
+  padding: 16px;
+  border-radius: 20px;
+  width: 80%;
+  font-size: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-row.input {
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* .todo-li-input {
+  margin-right: 15px;
+} */
+
+/*Dropdown*/
+.completed .dropdown-list-container {
+  color: rgba(0, 0, 0, 0.1);
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+}
+
+.dropdown-list-container {
+  transform-origin: top;
+  position: absolute;
+  padding: 10px 0px;
+  right: 0rem;
+  margin-top: 0.5rem;
+  border-radius: 0.376rem;
+  box-shadow: 0 10px 15px -3px grey;
+  background-color: white;
+  z-index: 5;
+}
+
+.dropdown-list-btn {
+  background-color: white;
+  border: none;
+  padding: 10px 30px;
+  width: 100%;
+}
+
+.dropdown-list-btn:hover {
+  background-color: #eaeaea;
 }
